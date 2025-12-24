@@ -17,14 +17,14 @@ public  void setaccountnumber(int accountNumber){
     this.accountNumber = accountNumber;
 }
 
- public double getbalance() {
+ public synchronized double getbalance() {
     return balance;
  }
  public void setbalance(double balance){
     this.balance = balance;
  }
 
-public double deposit (double amount) {
+public synchronized double deposit (double amount) {
     balance = amount + getbalance();
    System.out.println("La nouvelle balance est : " + balance );
    return balance;

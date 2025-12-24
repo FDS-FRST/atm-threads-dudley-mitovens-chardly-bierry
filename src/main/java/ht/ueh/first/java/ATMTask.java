@@ -33,6 +33,8 @@ public void setmontant(double montant){
 
 @Override
 public void run(){
+    try{
+        Thread.sleep(2000);
     if (action.equalsIgnoreCase("withdraw")){
         account.withdraw(montant);
     }
@@ -43,6 +45,12 @@ public void run(){
         account.getbalance();
         System.out.print("Votre balance est : " + account.getbalance() + ".");
     }
+} catch(InterruptedException e){
+        System.out.println("Le systeme a ete interrompu");
+    }
+    }
 }
 
-}
+
+
+
