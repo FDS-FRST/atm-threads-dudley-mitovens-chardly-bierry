@@ -6,12 +6,13 @@ public class BankAccount {
 
 public BankAccount(int accountNumber, double balance){
     this.accountNumber = accountNumber;
-    this.balance       = balance;
-  
+    this.balance       = balance; 
 }
+
 public int  getaccountNumber() {
     return accountNumber;
 }
+
 public  void setaccountnumber(int accountNumber){
     this.accountNumber = accountNumber;
 }
@@ -29,14 +30,15 @@ public double deposit (double amount) {
    return balance;
 }
 public double withdraw (double amount){
-if (amount < balance)
+if (amount <= balance)
 {
      balance = getbalance() - amount;
-
-    
+     System.out.println("Retrait fait avec succes, votre balance est :" + balance + ".");
 }
+else{
  System.out.println(" Vous n'avez pas assez d'argent pour faire ce retrait.");
-    System.out.println("Votre somme est : " + balance + " et vous ne pouvez reitirer la somme de  " + amount );
+    System.out.println("Votre somme est : " + balance + " et vous ne pouvez retirer la somme de  " + amount  + ".");
+}
     return balance;
 }
 

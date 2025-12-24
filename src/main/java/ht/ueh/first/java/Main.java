@@ -7,7 +7,10 @@ public class Main {
 
     BankAccount Pierre = new BankAccount (123, 1000);
     Pierre.deposit(125);
-    Pierre.withdraw(2000);
+    Pierre.withdraw(200);
+    Pierre.withdraw(250);
+    Pierre.withdraw(10000);
+
     System.out.println("Test acheve!");
     }
 
