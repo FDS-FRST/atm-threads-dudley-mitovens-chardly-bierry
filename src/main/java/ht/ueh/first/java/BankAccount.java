@@ -29,11 +29,11 @@ public double deposit (double amount) {
    System.out.println("La nouvelle balance est : " + balance );
    return balance;
 }
-public double withdraw (double amount){
+public synchronized double withdraw (double amount){
 if (amount <= balance)
 {
      balance = getbalance() - amount;
-     System.out.println("Retrait fait avec succes, votre balance est :" + balance + ".");
+     System.out.println("Retrait " + " de " + amount + " fait avec succes, votre balance est : " + balance + ".");
 }
 else{
  System.out.println(" Vous n'avez pas assez d'argent pour faire ce retrait.");

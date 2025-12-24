@@ -6,11 +6,11 @@ public class Main {
         System.out.println("Please see the readme for your assignation");
 
     BankAccount Pierre = new BankAccount (123, 1000);
-    Pierre.deposit(125);
-    Pierre.withdraw(200);
-    Pierre.withdraw(250);
-    Pierre.withdraw(10000);
-
+    ATMTask tache1 = new ATMTask(Pierre, "withdraw", 700);
+    Thread pierre1 = new Thread(tache1);
+    Thread pierre2 = new Thread(tache1);
+    pierre1.start();
+    pierre2.start();
     System.out.println("Test acheve!");
     }
 
